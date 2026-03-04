@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--
+      Document setup
+      - Charset + viewport keep typography and spacing consistent across devices.
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser tab title (not shown in the UI) -->
     <title>Pricing Plans — HTML version</title>
+
+    <!--
+      Typography (Google Fonts)
+      - preconnect improves font loading performance.
+      - Inter is the primary UI font used in the design.
+    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Local styles for layout + component styling -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Small “mode” label pinned to top for demos/hand-off -->
     <p class="page-label"><strong>HTML version</strong> — static markup</p>
+
+    <!-- Pricing cards layout wrapper (controls spacing and alignment) -->
     <div class="cards-container">
+        <!-- Card: Hobby plan -->
         <div class="card">
+            <!-- Card header area (title + price + feature list) -->
             <div class="card-top">
                 <h3 class="card-title">Hobby</h3>
                 <p class="card-price">
                     <span class="card-price-amount">Free</span>
                 </p>
+
+                <!-- Card body content (includes label + features list) -->
                 <div class="card-content">
                     <p class="includes-text">Includes:</p>
                     <ul class="features-list">
@@ -36,15 +57,22 @@
                     </ul>
                 </div>
             </div>
+
+            <!-- Secondary call-to-action for free tier -->
             <button class="download-button secondary">Download</button>
         </div>
+
+        <!-- Card: Pro plan -->
         <div class="card">
+            <!-- Card header area (title + price + feature list) -->
             <div class="card-top">
                 <h3 class="card-title">Pro</h3>
                 <p class="card-price">
                     <span class="card-price-amount">$20</span>
                     <span class="card-price-period">/mo.</span>
                 </p>
+
+                <!-- Card body content (includes label + features list) -->
                 <div class="card-content">
                     <p class="includes-text">Everything in Hobby, plus:</p>
                     <ul class="features-list">
@@ -67,7 +95,47 @@
                     </ul>
                 </div>
             </div>
+
+            <!-- Primary call-to-action for paid tier -->
             <button class="download-button primary">Get Pro</button>
+        </div>
+
+        <!-- Card: Entreprise plan (example of adding a new tier) -->
+        <div class="card">
+            <!-- Card header area (title + price + feature list) -->
+            <div class="card-top">
+                <h3 class="card-title">Entreprise</h3>
+                <p class="card-price">
+                    <span class="card-price-amount">$40</span>
+                    <span class="card-price-period">/mo.</span>
+                </p>
+
+                <!-- Card body content (includes label + features list) -->
+                <div class="card-content">
+                    <p class="includes-text">Everything in Pro, plus:</p>
+                    <ul class="features-list">
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Team seats and billing
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Priority support
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Advanced security controls
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Custom onboarding
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Primary call-to-action for enterprise tier -->
+            <button class="download-button primary">Contact sales</button>
         </div>
     </div>
 </body>
