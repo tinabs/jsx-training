@@ -165,7 +165,21 @@ body {
 .download-button.primary:active {
     background-color: #333;
 }
-
+.download-button.tertiary {
+    background-color: transparent;
+    color: #111;
+    border: 1px solid #333;
+}
+.download-button.tertiary:hover {
+    background-color: #D8D6CE;
+    border: 1px solid #333;
+    color: #333;
+}
+.download-button.tertiary:active {
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #333;
+}
 /* ==========================================================================
    Demo label (top pinned pill)
    - Helps differentiate this static HTML version in screenshots / review.
