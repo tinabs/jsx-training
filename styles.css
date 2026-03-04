@@ -1,9 +1,17 @@
+/* ==========================================================================
+   Base / Reset
+   - Keeps spacing predictable across browsers.
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ==========================================================================
+   Page layout
+   - Center the pricing cards on the canvas with a soft background.
+   ========================================================================== */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
@@ -14,6 +22,10 @@ body {
     padding: 20px;
 }
 
+/* ==========================================================================
+   Cards layout (the row of plans)
+   - Controls card spacing and alignment.
+   ========================================================================== */
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -23,6 +35,10 @@ body {
     align-items: flex-start;
 }
 
+/* ==========================================================================
+   Card container (each plan)
+   - Neutral surface, rounded corners, consistent width.
+   ========================================================================== */
 .card {
     display: flex;
     flex-direction: column;
@@ -34,11 +50,15 @@ body {
     flex-shrink: 0;
 }
 
+/* Top section inside a card (text content sits above the CTA button) */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* ==========================================================================
+   Card typography (title + price)
+   ========================================================================== */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -47,6 +67,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Price line uses inline-flex so amount + period align on the baseline */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -54,32 +75,40 @@ body {
     align-items: baseline;
 }
 
+/* Price amount (e.g., “Free”, “$20”) */
 .card-price-amount {
     font-size: 22px;
     font-weight: 400;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Price period (e.g., “/mo.”) */
 .card-price-period {
     font-size: 14px;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* ==========================================================================
+   Card content (features list)
+   ========================================================================== */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* Small intro line above the feature bullets */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+/* Feature list: custom checkmark instead of default bullets */
 .features-list {
     list-style: none;
     padding: 0;
 }
 
+/* One feature row */
 .features-list li {
     display: flex;
     align-items: center;
@@ -88,6 +117,7 @@ body {
     color: #26251e;
 }
 
+/* Checkmark icon styling (kept subtle + aligned) */
 .checkmark {
     color: #26251e;
     font-size: 14px;
@@ -95,6 +125,10 @@ body {
     font-weight: 400;
 }
 
+/* ==========================================================================
+   Buttons (CTA)
+   - Base button is “secondary”; add .primary for the dark emphasis style.
+   ========================================================================== */
 .download-button {
     margin-top: auto;
     width: fit-content;
@@ -109,6 +143,7 @@ body {
     transition: background-color 0.2s ease;
 }
 
+/* Hover/active states (subtle darkening) */
 .download-button:hover {
     background-color: #D8D6CE;
 }
@@ -117,6 +152,7 @@ body {
     background-color: #D8D6CE;
 }
 
+/* Primary button variant for the “Pro” plan */
 .download-button.primary {
     background-color: #111;
     color: #fff;
@@ -130,6 +166,10 @@ body {
     background-color: #333;
 }
 
+/* ==========================================================================
+   Demo label (top pinned pill)
+   - Helps differentiate this static HTML version in screenshots / review.
+   ========================================================================== */
 .page-label {
     position: fixed;
     top: 16px;
@@ -143,6 +183,7 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+/* Slight emphasis for the “HTML version” text */
 .page-label strong {
     color: #333;
 }
